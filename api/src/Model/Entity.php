@@ -13,7 +13,7 @@ class Entity
      * Entity constructor.
      * @param Uuid $uuid
      */
-    public function __construct(Uuid $uuid)
+    public function __construct(Uuid $uuid, EntityData $data)
     {
         $this->uuid = $uuid;
     }

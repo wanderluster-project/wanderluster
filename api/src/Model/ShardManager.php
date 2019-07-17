@@ -2,12 +2,17 @@
 
 namespace App\Model;
 
+use PDO;
+
 class ShardManager
 {
+
+//    public function
+
     /**
-     * @return int
+     * @return PDO
      */
-    public function getAvailableShardForInsert():int{
+    public function getAvailableShard():PDO{
         return 1;
     }
 }
