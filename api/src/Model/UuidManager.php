@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-class UuidGenerator
+class UuidManager
 {
     /**
      * @var ShardManager
@@ -89,5 +89,16 @@ class UuidGenerator
     public function getHexString(int $shard, int $type, int $localId): string
     {
         return '4a1cd336-eb6e-4f45-9fec-71bbdbadc758';
+    }
+
+    public function hexString2Parts($hexString){
+        $hex = str_replace('-','',$hexString);
+        return $this->hexToIntegers($hex);
+    }
+
+    function hexToIntegers($hex) {
+        $bin = pack('h*', $hex);
+        var_dump($bin);
+        return unpack('L*', $bin);
     }
 }
