@@ -47,7 +47,7 @@ class Uuid
     {
         if (!self::$checkedIs64Bit) {
             if (PHP_INT_SIZE !== 8) {
-                throw new RuntimeException('Unable initialize UUID manager on 32 bit system.', ExceptionCodes::NOT_64BIT);
+                throw new RuntimeException('Unable initialize UUID on 32 bit system.', ExceptionCodes::NOT_64BIT);
             }
             self::$checkedIs64Bit = true;
         }
